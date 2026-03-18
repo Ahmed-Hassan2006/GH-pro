@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Manager - The Ultimate Guide</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #fdfdfd;
+            --text-color: #333;
+            --code-bg: #f4f4f4;
+            --border-color: #ddd;
+            --success-color: #27ae60;
+            --warning-color: #f39c12;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+            background-color: white;
+            border-radius: 8px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--accent-color);
+            border-radius: 8px 8px 0 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-top: 40px;
+            display: flex;
+            align-items: center;
+        }
+
+        h3 {
+            color: var(--accent-color);
+            margin-top: 25px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul, ol {
+            margin-bottom: 20px;
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .note {
+            background-color: #e8f4f8;
+            border-left: 5px solid var(--accent-color);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .tip {
+            background-color: #e9f7ef;
+            border-left: 5px solid var(--success-color);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .version-box {
+            background-color: #fff8e1;
+            border-left: 5px solid var(--warning-color);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .shortcut-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .shortcut-table th, .shortcut-table td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: left;
+        }
+
+        .shortcut-table th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .shortcut-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        kbd {
+            background-color: #eee;
+            border-radius: 3px;
+            border: 1px solid #b4b4b4;
+            box-shadow: 0 1px 1px rgba(0,0,0,.2), 0 2px 0 0 rgba(255,255,255,.7) inset;
+            color: #333;
+            display: inline-block;
+            font-size: 0.85em;
+            font-weight: 700;
+            line-height: 1;
+            padding: 2px 5px;
+            white-space: nowrap;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .btn-link {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #fff !important;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-decoration: none;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        .btn-link:hover {
+            background-color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 5px;
+            color: white !important;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: opacity 0.3s;
+        }
+        .contact-btn:hover {
+            opacity: 0.8;
+        }
+        .contact-wa { background-color: #25D366; }
+        .contact-tg { background-color: #0088cc; }
+        .contact-em { background-color: #D44638; }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 30px;
+            background-color: #f4f4f4;
+            font-size: 0.9em;
+            border-top: 1px solid var(--border-color);
+            border-radius: 0 0 8px 8px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+<header>
+    <h1>GitHub Manager Guide</h1>
+    <p>From Zero to Hero: The ultimate tool built for you.</p>
+    <p style="font-size: 1.1em; margin-top: 15px; color: #a9dfbf;">Current Version: <strong>2.0.5</strong></p>
+</header>
+
+
+<section id="intro">
+    <h2>Welcome to Your New Workflow!</h2>
+    <p>
+        Hello friend! I am Ahmed, the developer behind this project. If you are reading this, you are about to start a journey into the world of GitHub using my <strong>GitHub Manager</strong> tool. 
+        Whether you are a sighted user or using a screen reader like NVDA or JAWS, I wrote this guide and built this program specifically for you.
+    </p>
+    <p>
+        I know GitHub can look complicated at first. People talk about "Commits," "Repos," "Branches," and "Pull Requests." 
+        <strong>Don't worry.</strong> I designed this program to hide all that complexity and give you a simple, smooth interface to manage your files and projects easily.
+    </p>
+
+    <div class="version-box">
+        <h3>How to Read Our Version Numbers (e.g., 2.0.5)</h3>
+        <p>I use a specific system to name the versions of this app so you always know what you are running:</p>
+        <ul>
+            <li><strong>First Number (2):</strong> The Major Stable Version. This means the app has reached a huge milestone and the core features are stable for everyone to use.</li>
+            <li><strong>Second Number (0):</strong> The Public Beta Version. Whenever I add a big new feature and share it with the community to test it out, this number goes up.</li>
+            <li><strong>Third Number (5):</strong> The Developer/Experimental Version. This is my personal testing ground. If you see a number here, it means I am actively testing small tweaks, fixing bugs, and experimenting before making them official.</li>
+        </ul>
+    </div>
+
+    <div class="tip">
+        <strong>What's New in v2.0.0+:</strong> We have added a Global Chat system to talk with other users worldwide, full Folder Uploading with structure options, a totally revamped Releases window, and an upgraded AI Assistant!
+    </div>
+</section>
+
+<section id="what-is-github">
+    <h2>What is GitHub anyway?</h2>
+    <p>
+        Imagine you are writing a book or programming a project. You save a file today, make edits tomorrow, and maybe delete a paragraph the next day. 
+        Later on, you might realize that the paragraph you deleted was actually important, but you cannot get it back because you saved over the original file.
+    </p>
+    <p>
+        This is exactly why GitHub is so useful. It is a cloud storage service (similar to Google Drive or Dropbox), but it is designed specifically to track changes:
+    </p>
+    <ul>
+        <li>It saves every version of your file, creating a log of your edits (known as <strong>History</strong> or Commits).</li>
+        <li>It allows you to share your work with the public (Open Source).</li>
+        <li>It provides a space for people to report problems or suggest ideas for your project (<strong>Issues</strong>).</li>
+        <li>It allows you to package your finished work so people can easily download it (<strong>Releases</strong>).</li>
+    </ul>
+    <p>In GitHub, your main project folder is called a <strong>Repository</strong> (or "Repo" for short).</p>
+</section>
+
+<section id="getting-started-token">
+    <h2>Step 1: Setup (The Keys to the Kingdom)</h2>
+    <p>
+        Before my program can manage your files on GitHub or use the AI features, it needs your permission. You only need to set this up once.
+    </p>
+
+    <h3>1. The GitHub Token (Required)</h3>
+    <p>This is the master key that tells GitHub you allow this app to manage your account.</p>
+    <ol>
+        <li>Click this link: <a href="https://github.com/settings/tokens/new?scopes=repo,user,delete_repo,workflow,admin:repo_hook" target="_blank" class="btn-link">Generate GitHub Token</a> (You will need to sign in to GitHub).</li>
+        <li><strong>Note Name:</strong> Type "GitHub Manager App" so you remember what it is for.</li>
+        <li><strong>Expiration:</strong> Choose "No expiration" (so you don't have to repeat this later).</li>
+        <li><strong>Select Scopes:</strong> If you used my link above, all the correct boxes (repo, user, delete_repo, etc.) are already checked for you automatically!</li>
+        <li>Scroll to the bottom and click <strong>"Generate token"</strong>.</li>
+        <li><strong>Copy it NOW!</strong> You will see a long string starting with <code>ghp_</code>. Copy it immediately, because GitHub will never show it to you again.</li>
+    </ol>
+
+    <h3>2. Google AI Key (Optional)</h3>
+    <p>If you want to use the built-in AI Chat to help you write code or answer your questions, you need this free key from Google.</p>
+    <ol>
+        <li>Go here: <a href="https://aistudio.google.com/app/apikey" target="_blank" class="btn-link">Get Google Gemini Key</a></li>
+        <li>Click on <strong>"Create API Key"</strong>.</li>
+        <li>Copy the key that appears (it usually starts with <code>AIza</code>).</li>
+    </ol>
+
+    <h3>3. Entering the Keys in the App</h3>
+    <p>
+        Open GitHub Manager. The login window will appear automatically. Paste your <strong>GitHub Token</strong> in the box and click Login. 
+        <br>To add your Google Key later, press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> to open the Settings window, go to the <strong>Access Keys</strong> section, and paste it there.
+    </p>
+</section>
+
+<section id="interface">
+    <h2>The Interface & Features</h2>
+    <p>I split the program into two main areas to keep things organized: The <strong>Dashboard</strong> and the <strong>Repository Tab</strong>.</p>
+
+    <h3>1. The Dashboard (Your Headquarters)</h3>
+    <p>This is the first screen you see. It shows a list of all your projects.</p>
+    <ul>
+        <li><strong>My Repos:</strong> Refreshes the list to show your projects.</li>
+        <li><strong>Global Chat (New!):</strong> Press <kbd>Ctrl</kbd> + <kbd>G</kbd> to enter a worldwide chat room. You can talk to other users of this app in English, Arabic, Spanish, and more!</li>
+        <li><strong>Advanced Search:</strong> Press <kbd>Ctrl</kbd> + <kbd>F</kbd> to find other repositories, users, or see what is trending on GitHub today.</li>
+        <li><strong>Notifications:</strong> Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>A</kbd> to see if someone starred your repo, commented on your issues, or opened a Pull Request.</li>
+    </ul>
+
+    <h3>2. The Repository Tab (Inside a Project)</h3>
+    <p>When you press <kbd>Enter</kbd> on a repo in the Dashboard, a new tab opens specifically for that project.</p>
+    
+    <h4>Files, Folders & Uploading</h4>
+    <p>You will see a list of files exactly like Windows Explorer. Press <kbd>Enter</kbd> to open files in your browser or enter folders. 
+    <br><strong>Massive Update:</strong> You can now upload entire folders with hundreds of files at once! It will even ask if you want to keep the folder structure or flatten them.</p>
+
+    <h4>Team Manager</h4>
+    <p>
+        Want to build an app with a friend? Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>M</kbd> to add "Collaborators". You can give them permission to read, write, or be an admin of your project.
+    </p>
+
+    <h4>Issues (Problems & Tasks)</h4>
+    <p>
+        Press <kbd>Ctrl</kbd> + <kbd>I</kbd>. This is a to-do list or forum for your project. You can read bug reports, reply to users, close solved problems, or create new tasks.
+    </p>
+
+    <h4>Releases (The Finished Product)</h4>
+    <p>
+        Press <kbd>Ctrl</kbd> + <kbd>R</kbd>. You will see a list of all your app versions. Click on one to see the release notes and a clean list of all downloadable files (Assets) like ZIPs or EXEs.
+    </p>
+</section>
+
+<section id="ai-copilot">
+    <h2>AI Assistant (Your Coding Partner)</h2>
+    <p>
+        Press <kbd>Ctrl</kbd> + <kbd>K</kbd> to open the AI conversation. I connected this to GitHub Models and Google Gemini so you have the best brains helping you.
+    </p>
+    <ul>
+        <li><strong>Ask Questions:</strong> "How do I start a Python project?" or "Explain this code to me."</li>
+        <li><strong>Smart Menus:</strong> If the AI sends you a link or a block of code, press the Context Menu key (Right-click) to easily copy the code or open the links directly.</li>
+    </ul>
+</section>
+
+<section id="shortcuts">
+    <h2>Keyboard Shortcuts</h2>
+    <p>
+        I designed this program to be fully accessible and usable without a mouse. Here is the complete list of shortcuts.
+    </p>
+
+    <h3>Global Shortcuts (Work Anywhere)</h3>
+    <table class="shortcut-table">
+        <tr>
+            <th>Shortcut</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td><kbd>Ctrl</kbd> + <kbd>G</kbd></td>
+            <td><strong>Global Chat:</strong> Enter the worldwide community chat rooms.</td>
+        </tr>
+        <tr>
+            <td><kbd>Ctrl</kbd> + <kbd>K</kbd></td>
+            <td><strong>AI Chat:</strong> Open the smart AI assistant.</td>
+        </tr>
+        <tr>
+            <td><kbd>Ctrl</kbd> + <kbd>F</kbd></td>
+            <td><strong>Search:</strong> Open Advanced Search (Repos, Users, Trending).</td>
+        </tr>
+        <tr>
+            <td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd></td>
+            <td><strong>Settings:</strong> Open app settings (Tokens, Language, Theme).</td>
+        </tr>
+        <tr>
+            <td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>A</kbd></td>
+            <td><strong>Notifications:</strong> Check your GitHub alerts and inbox.</td>
+        </tr>
+        <tr>
+            <td><kbd>Ctrl</kbd> + <kbd>T</kbd></td>
+            <td><strong>New Tab:</strong> Open a repo directly by pasting its URL.</td>
+        </tr>
+        <tr>
+            <td><kbd>Ctrl</kbd> + <kbd>W</kbd></td>
+            <td><strong>Close Tab:</strong> Close the currently active project tab.</td>
+        </tr>
+        <tr>
+            <td><kbd>F5</kbd></td>
+            <td><strong>Refresh All:</strong> Reload everything and check for app updates.</td>
+        </tr>
+        <tr>
+            <td><kbd>F1</kbd></td>
+            <td><strong>Help:</strong> Open this Guide.</td>
+        </tr>
+    </table>
+
+    <h3>Dashboard Shortcuts (Main Tab)</h3>
+    <table class="shortcut-table">
+        <tr>
+            <th>Shortcut</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td><kbd>Ctrl</kbd> + <kbd>N</kbd></td>
+            <td><strong>New Repo:</strong> Create a brand new project on GitHub.</td>
+        </tr>
+        <tr>
+            <td><kbd>Ctrl</kbd> + <kbd>H</kbd></td>
+            <td><strong>My Repos:</strong> Quickly return to viewing your own repositories.</td>
+        </tr>
+        <tr>
+            <td><kbd>Ctrl</kbd> + <kbd>L</kbd></td>
+            <td><strong>Copy Link:</strong> Copy the URL of the selected repository.</td>
+        </tr>
+        <tr>
+            <td><kbd>Delete</kbd></td>
+            <td><strong>Delete Repo:</strong> Permanently delete the selected project (Requires confirmation).</td>
+        </tr>
+    </table>
+
+    <h3>Repository Tab Shortcuts (Inside a Project)</h3>
+    <table class="shortcut-table">
+        <tr>
+            <th>Shortcut</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td><kbd>Enter</kbd></td>
+            <td>Open file (in browser) or Enter selected Folder.</td>
+        </tr>
+        <tr>
+            <td><kbd>Backspace</kbd></td>
+            <td>Go back to the previous folder (Up one level).</td>
+        </tr>
+        <tr>
+            <td><kbd>Alt</kbd> + <kbd>Home</kbd></td>
+            <td>Jump straight back to the root folder of the repository.</td>
+        </tr>
+        <tr>
+            <td><kbd>Ctrl</kbd> + <kbd>N</kbd></td>
+            <td><strong>New File:</strong> Create a blank text file directly on GitHub.</td>
+        </tr>
+        <tr>
+            <td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd></td>
+            <td><strong>New Folder:</strong> Create a new directory.</td>
+        </tr>
+        <tr>
+            <td><kbd>Ctrl</kbd> + <kbd>U</kbd></td>
+            <td><strong>Upload:</strong> Upload a file from your computer.</td>
+        </tr>
+        <tr>
+            <td><kbd>Ctrl</kbd> + <kbd>R</kbd></td>
+            <td><strong>Releases:</strong> Open the Releases and Downloads window.</td>
+        </tr>
+        <tr>
+            <td><kbd>Ctrl</kbd> + <kbd>I</kbd></td>
+            <td><strong>Issues:</strong> Open the Bug Tracker / Issues window.</td>
+        </tr>
+        <tr>
+            <td><kbd>Ctrl</kbd> + <kbd>H</kbd></td>
+            <td><strong>History:</strong> View the Commit history (who changed what and when).</td>
+        </tr>
+        <tr>
+            <td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>M</kbd></td>
+            <td><strong>Team:</strong> Manage Collaborators.</td>
+        </tr>
+        <tr>
+            <td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>W</kbd></td>
+            <td><strong>Workflows:</strong> View the status of your automated tasks (GitHub Actions / CI/CD).</td>
+        </tr>
+        <tr>
+            <td><kbd>Ctrl</kbd> + <kbd>E</kbd></td>
+            <td><strong>Internal Edit:</strong> Open a text file in the app's internal editor.</td>
+        </tr>
+        <tr>
+            <td><kbd>Ctrl</kbd> + <kbd>D</kbd></td>
+            <td><strong>Download:</strong> Download the selected file, or the entire Repo as a ZIP.</td>
+        </tr>
+        <tr>
+            <td><kbd>F2</kbd></td>
+            <td><strong>Rename:</strong> Rename the selected file or folder.</td>
+        </tr>
+        <tr>
+            <td><kbd>Delete</kbd></td>
+            <td><strong>Delete:</strong> Delete the selected file or folder.</td>
+        </tr>
+        <tr>
+            <td><kbd>Ctrl</kbd> + <kbd>C</kbd></td>
+            <td><strong>Copy:</strong> Select file to copy.</td>
+        </tr>
+        <tr>
+            <td><kbd>Ctrl</kbd> + <kbd>X</kbd></td>
+            <td><strong>Cut:</strong> Select file to move.</td>
+        </tr>
+        <tr>
+            <td><kbd>Ctrl</kbd> + <kbd>V</kbd></td>
+            <td><strong>Paste:</strong> Paste the copied/cut file into the current folder.</td>
+        </tr>
+    </table>
+</section>
+
+<section id="faq">
+    <h2>FAQ & Troubleshooting</h2>
+    
+    <h3>The app says "Repo Not Found" when I try to open a link.</h3>
+    <p>Ensure the link is correct. It should look like <code>owner/repo-name</code>. Also, make sure your GitHub Token has the <code>repo</code> scope checked so it can access private repositories.</p>
+
+    <h3>I see a "Binary File Error".</h3>
+    <p>This happens if you press <kbd>Ctrl</kbd>+<kbd>E</kbd> to edit an image, PDF, or executable (EXE) file inside the app's internal text editor. Text editors cannot read images or programs! Use <kbd>Ctrl</kbd>+<kbd>D</kbd> to download the file to your computer instead.</p>
+
+    <h3>Does it update automatically?</h3>
+    <p>Yes! Every time you open the app, it checks a secure file on my server. If a new version is released, it will pop up asking if you want to update, and it will handle the entire installation process for you.</p>
+
+    <h3>Can I manage Private Repos?</h3>
+    <p>Absolutely, as long as you checked the "repo" permission box when creating your Token in Step 1.</p>
+</section>
+
+<footer>
+    <p><strong>GitHub Manager v2.0.5</strong></p>
+    <p>Designed, Developed, and Maintained with love by <strong>Ahmed Hassan Abdel Nabi</strong></p>
+    
+    <div class="contact-area">
+        <a href="https://wa.me/201558863325" target="_blank" class="contact-btn contact-wa">WhatsApp</a>
+        <a href="https://t.me/ah3376" target="_blank" class="contact-btn contact-tg">Telegram</a>
+        <a href="mailto:ah2635670@gmail.com" class="contact-btn contact-em">Email</a>
+    </div>
+
+    <p style="margin-top: 20px; font-style: italic; color: #7f8c8d;">Making GitHub accessible and easy for everyone, everywhere.</p>
+</footer>
+</div>
+
+</body>
+</html>
