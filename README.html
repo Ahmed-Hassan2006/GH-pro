@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub Manager - The Ultimate Guide</title>
+    <title>Git Ready Access - The Ultimate Guide</title>
     <style>
         :root {
             --primary-color: #2c3e50;
@@ -184,6 +184,14 @@
         .contact-tg { background-color: #0088cc; }
         .contact-em { background-color: #D44638; }
 
+        .copy-btn {
+            background-color: #2c3e50;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9em;
+            font-family: inherit;
+        }
+
         footer {
             text-align: center;
             margin-top: 50px;
@@ -199,16 +207,15 @@
 
 <div class="container">
 <header>
-    <h1>GitHub Manager Guide</h1>
+    <h1>Git Ready Access Guide</h1>
     <p>From Zero to Hero: The ultimate tool built for you.</p>
-    <p style="font-size: 1.1em; margin-top: 15px; color: #a9dfbf;">Current Version: <strong>2.0.5</strong></p>
+    <p style="font-size: 1.1em; margin-top: 15px; color: #a9dfbf;">Current Version: <strong>1.0.5</strong> <span style="color: #f39c12;">(First Public Release)</span></p>
 </header>
-
 
 <section id="intro">
     <h2>Welcome to Your New Workflow!</h2>
     <p>
-        Hello friend! I am Ahmed, the developer behind this project. If you are reading this, you are about to start a journey into the world of GitHub using my <strong>GitHub Manager</strong> tool. 
+        Hello friend! I am Ahmed, the developer behind this project. If you are reading this, you are about to start a journey into the world of GitHub using my <strong>Git Ready Access</strong> tool. 
         Whether you are a sighted user or using a screen reader like NVDA or JAWS, I wrote this guide and built this program specifically for you.
     </p>
     <p>
@@ -217,18 +224,37 @@
     </p>
 
     <div class="version-box">
-        <h3>How to Read Our Version Numbers (e.g., 2.0.5)</h3>
+        <h3>How to Read Our Version Numbers (e.g., 1.0.5)</h3>
         <p>I use a specific system to name the versions of this app so you always know what you are running:</p>
         <ul>
-            <li><strong>First Number (2):</strong> The Major Stable Version. This means the app has reached a huge milestone and the core features are stable for everyone to use.</li>
+            <li><strong>First Number (1):</strong> The Major Stable Version. This means the app has reached a huge milestone and the core features are stable for everyone to use.</li>
             <li><strong>Second Number (0):</strong> The Public Beta Version. Whenever I add a big new feature and share it with the community to test it out, this number goes up.</li>
             <li><strong>Third Number (5):</strong> The Developer/Experimental Version. This is my personal testing ground. If you see a number here, it means I am actively testing small tweaks, fixing bugs, and experimenting before making them official.</li>
         </ul>
     </div>
 
     <div class="tip">
-        <strong>What's New in v2.0.0+:</strong> We have added a Global Chat system to talk with other users worldwide, full Folder Uploading with structure options, a totally revamped Releases window, and an upgraded AI Assistant!
+        <strong>What's New in v1.0.5:</strong> Full Folder Uploading with structure options, a totally revamped Releases window with instant upload, Pull Requests management, Favorites, Repository Statistics, Developer Tools (Addons), support for 15 languages, and a brand new program identity!
     </div>
+</section>
+
+<section id="new-beginning">
+    <h2>A New Beginning: Why the New Name?</h2>
+    <p>
+        If you have used my previous versions before, you probably knew this program by the name <strong>"GitHub Manager"</strong>. That name served us well for a long time, but today we are starting a completely new chapter.
+    </p>
+    <p>
+        <strong>This is not just an update.</strong> Git Ready Access is a completely new and rewritten version of the program, built from the ground up with a modern engine, new features, and a smoother experience than all the previous versions combined.
+    </p>
+    <p>
+        <strong>Why did we change the name?</strong> "GitHub" is a registered trademark owned by the GitHub company, and their trademark policy does not allow other products to use the name in their own titles. Since I want to publish this program to the public and let everyone use it freely and safely, I could not keep the old name. So I gave the program its own unique name that belongs only to it: <strong>"Git Ready Access"</strong> — meaning quick and easy access to your Git projects, ready whenever you are.
+    </p>
+    <div class="tip">
+        <strong>New Version, New Identity:</strong> Along with the new name, the program received a brand new version number that starts over from <strong>1.0.5</strong>. This is the <strong>first public release</strong> of Git Ready Access, and it is the official first version meant for publishing and for everyone to use.
+    </div>
+    <p>
+        Don't worry — everything you loved in the previous versions is still here (and even better), plus many brand new features explained in detail below.
+    </p>
 </section>
 
 <section id="what-is-github">
@@ -252,32 +278,52 @@
 <section id="getting-started-token">
     <h2>Step 1: Setup (The Keys to the Kingdom)</h2>
     <p>
-        Before my program can manage your files on GitHub or use the AI features, it needs your permission. You only need to set this up once.
+        Before my program can manage your files on GitHub, it needs your permission. You only need to set this up once.
     </p>
 
     <h3>1. The GitHub Token (Required)</h3>
     <p>This is the master key that tells GitHub you allow this app to manage your account.</p>
     <ol>
         <li>Click this link: <a href="https://github.com/settings/tokens/new?scopes=repo,user,delete_repo,workflow,admin:repo_hook" target="_blank" class="btn-link">Generate GitHub Token</a> (You will need to sign in to GitHub).</li>
-        <li><strong>Note Name:</strong> Type "GitHub Manager App" so you remember what it is for.</li>
+        <li><strong>Note Name:</strong> Type "Git Ready Access App" so you remember what it is for.</li>
         <li><strong>Expiration:</strong> Choose "No expiration" (so you don't have to repeat this later).</li>
         <li><strong>Select Scopes:</strong> If you used my link above, all the correct boxes (repo, user, delete_repo, etc.) are already checked for you automatically!</li>
         <li>Scroll to the bottom and click <strong>"Generate token"</strong>.</li>
         <li><strong>Copy it NOW!</strong> You will see a long string starting with <code>ghp_</code>. Copy it immediately, because GitHub will never show it to you again.</li>
     </ol>
 
-    <h3>2. Google AI Key (Optional)</h3>
-    <p>If you want to use the built-in AI Chat to help you write code or answer your questions, you need this free key from Google.</p>
-    <ol>
-        <li>Go here: <a href="https://aistudio.google.com/app/apikey" target="_blank" class="btn-link">Get Google Gemini Key</a></li>
-        <li>Click on <strong>"Create API Key"</strong>.</li>
-        <li>Copy the key that appears (it usually starts with <code>AIza</code>).</li>
-    </ol>
+    <h4>What the Scopes Mean</h4>
+    <table class="shortcut-table">
+        <tr>
+            <th>Scope</th>
+            <th>Purpose</th>
+        </tr>
+        <tr>
+            <td><code>repo</code></td>
+            <td>Full control of public and private repositories, files, and contents.</td>
+        </tr>
+        <tr>
+            <td><code>user</code></td>
+            <td>Read profile information and user data.</td>
+        </tr>
+        <tr>
+            <td><code>delete_repo</code></td>
+            <td>Allow deleting repositories from within the app.</td>
+        </tr>
+        <tr>
+            <td><code>workflow</code></td>
+            <td>Manage GitHub Actions / workflows.</td>
+        </tr>
+        <tr>
+            <td><code>admin:repo_hook</code></td>
+            <td>Manage webhooks and repository admin operations.</td>
+        </tr>
+    </table>
 
-    <h3>3. Entering the Keys in the App</h3>
+    <h3>2. Entering the Token in the App</h3>
     <p>
-        Open GitHub Manager. The login window will appear automatically. Paste your <strong>GitHub Token</strong> in the box and click Login. 
-        <br>To add your Google Key later, press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> to open the Settings window, go to the <strong>Access Keys</strong> section, and paste it there.
+        Open Git Ready Access. The login window will appear automatically. Paste your <strong>GitHub Token</strong> in the box and click Login. 
+        <br>You can change your token later by pressing <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> to open the Settings window, going to the <strong>Access Keys</strong> section, and pasting the new one there.
     </p>
 </section>
 
@@ -289,7 +335,6 @@
     <p>This is the first screen you see. It shows a list of all your projects.</p>
     <ul>
         <li><strong>My Repos:</strong> Refreshes the list to show your projects.</li>
-        <li><strong>Global Chat (New!):</strong> Press <kbd>Ctrl</kbd> + <kbd>G</kbd> to enter a worldwide chat room. You can talk to other users of this app in English, Arabic, Spanish, and more!</li>
         <li><strong>Advanced Search:</strong> Press <kbd>Ctrl</kbd> + <kbd>F</kbd> to find other repositories, users, or see what is trending on GitHub today.</li>
         <li><strong>Notifications:</strong> Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>A</kbd> to see if someone starred your repo, commented on your issues, or opened a Pull Request.</li>
     </ul>
@@ -317,17 +362,6 @@
     </p>
 </section>
 
-<section id="ai-copilot">
-    <h2>AI Assistant (Your Coding Partner)</h2>
-    <p>
-        Press <kbd>Ctrl</kbd> + <kbd>K</kbd> to open the AI conversation. I connected this to GitHub Models and Google Gemini so you have the best brains helping you.
-    </p>
-    <ul>
-        <li><strong>Ask Questions:</strong> "How do I start a Python project?" or "Explain this code to me."</li>
-        <li><strong>Smart Menus:</strong> If the AI sends you a link or a block of code, press the Context Menu key (Right-click) to easily copy the code or open the links directly.</li>
-    </ul>
-</section>
-
 <section id="shortcuts">
     <h2>Keyboard Shortcuts</h2>
     <p>
@@ -339,14 +373,6 @@
         <tr>
             <th>Shortcut</th>
             <th>Action</th>
-        </tr>
-        <tr>
-            <td><kbd>Ctrl</kbd> + <kbd>G</kbd></td>
-            <td><strong>Global Chat:</strong> Enter the worldwide community chat rooms.</td>
-        </tr>
-        <tr>
-            <td><kbd>Ctrl</kbd> + <kbd>K</kbd></td>
-            <td><strong>AI Chat:</strong> Open the smart AI assistant.</td>
         </tr>
         <tr>
             <td><kbd>Ctrl</kbd> + <kbd>F</kbd></td>
@@ -483,6 +509,322 @@
     </table>
 </section>
 
+<section id="new-releases">
+    <h2>Releases: Create & Publish Your Own Versions (New)</h2>
+    <p>
+        You already know how to <em>browse</em> releases with <kbd>Ctrl</kbd> + <kbd>R</kbd>. But in this new version I added something very powerful: you can now <strong>create, edit, and publish your own releases directly from the app</strong> — no need to open the website at all!
+    </p>
+    <h3>Creating a Brand New Release</h3>
+    <ol>
+        <li>Open the Releases window inside any project (<kbd>Ctrl</kbd> + <kbd>R</kbd>).</li>
+        <li>Press the <strong>"New Release"</strong> button.</li>
+        <li>Write the version tag, for example <code>v1.0.5</code>. You can also pick an existing tag from the list.</li>
+        <li>Write a title for the release and the release notes (what is new in this version).</li>
+        <li>If you want the release to be hidden until you are ready, check the <strong>"Draft"</strong> box. Otherwise it will be published for everyone.</li>
+    </ol>
+    <h3>Uploading Files (Assets) Immediately</h3>
+    <p>
+        The best part: as soon as you choose your files, the upload starts <strong>immediately in the background</strong>. You do not have to wait for anything.
+    </p>
+    <ul>
+        <li>Every file shows its own status: <strong>Pending, Uploading (with percentage), or Uploaded</strong>.</li>
+        <li>There is a progress bar that shows the overall progress of all files together.</li>
+        <li>You can <strong>stop/cancel</strong> any file while it is uploading, or <strong>delete</strong> a file that already finished.</li>
+        <li>If a file fails, the app cleans up after itself so you do not get broken or half-uploaded files on your release.</li>
+        <li>Everything runs in the background, so the window stays responsive and you can keep working.</li>
+    </ul>
+    <h3>Editing an Existing Release</h3>
+    <p>
+        Select any release and you can edit it easily: change the tag, update the title and notes, <strong>add more files</strong>, delete old assets, and save. This is perfect when you forgot to attach a file or made a typo in the notes.
+    </p>
+    <div class="tip">
+        <strong>Tip:</strong> Releases are the professional way to give your users ready-made packages (ZIP, EXE, APK...). With Git Ready Access, creating a release takes less than a minute.
+    </div>
+</section>
+
+<section id="pull-requests">
+    <h2>Pull Requests: Working Together (New)</h2>
+    <p>
+        A Pull Request (PR) is how people suggest changes to your project. Someone copies (forks) your project, makes edits, and then sends you a request to add those changes. Think of it like someone editing a document and then asking: <em>"Please accept my changes."</em>
+    </p>
+    <p>Now you can handle all of that from inside the app:</p>
+    <ul>
+        <li><strong>List all Pull Requests:</strong> Open the Pull Requests window from the project's menu. You will see every PR sent to your project.</li>
+        <li><strong>Know their state:</strong> Each PR clearly shows if it is <strong>Open</strong>, <strong>Merged</strong>, or <strong>Closed</strong>, so you always know what needs your attention.</li>
+        <li><strong>Read the details:</strong> View the PR's title, who sent it, and the full description so you understand exactly what the person wants to change.</li>
+        <li><strong>Merge with one press:</strong> When you are happy with a PR, press <strong>Merge</strong>. The app will ask you to confirm first (so you never merge by accident), then it does the job instantly.</li>
+        <li>After a PR is merged or closed, the button changes to <strong>"Merged or Closed"</strong> so you can see it is done.</li>
+    </ul>
+</section>
+
+<section id="favorites-stats">
+    <h2>Favorites & Statistics (New)</h2>
+    <h3>Favorites (Your Shortcut List)</h3>
+    <p>
+        Do you work on the same repositories every day? Save them to <strong>Favorites</strong> and reach them in one press:
+    </p>
+    <ul>
+        <li>From the repository menu (right-click / context key on any repo), choose <strong>Add to Favorites</strong>.</li>
+        <li>Press <kbd>Ctrl</kbd> + <kbd>B</kbd> anywhere to open your Favorites list instantly.</li>
+        <li>Remove a repo from favorites the same way whenever you no longer need it.</li>
+    </ul>
+    <h3>Repository Statistics</h3>
+    <p>
+        Want to know how popular your project is? From the repository menu, open <strong>Repository Statistics</strong> and see useful numbers about any project, such as stars, forks, watchers, and open issues — all without opening your browser.
+    </p>
+</section>
+
+<section id="developer-tools">
+    <h2>Developer Tools (Addons) (New)</h2>
+    <p>
+        I built a small addons system so the community can extend Git Ready Access with mini-programs:
+    </p>
+    <ul>
+        <li><strong>Available Online:</strong> Browse addons published by developers, download them, and they appear in your installed list.</li>
+        <li><strong>Installed:</strong> Manage the addons you already have, and launch them directly.</li>
+        <li><strong>Developer Panel:</strong> If you are a developer, you can publish your own addon to the store (using your GitHub token), so other users can find and install it.</li>
+    </ul>
+    <div class="note">
+        <strong>Please note:</strong> this feature is still <strong>under testing</strong> and is <strong>not yet available to the public</strong>. It will be officially announced once it is fully ready.
+    </div>
+</section>
+
+<section id="languages-security">
+    <h2>Languages & Security (New)</h2>
+    <h3>Speaks Your Language</h3>
+    <p>
+        Git Ready Access is fully translated into <strong>15 languages</strong>: English, Arabic, French, Spanish, Portuguese, Turkish, Vietnamese, Chinese (Simplified & Traditional), Russian, German, Japanese, Korean, Hindi, and Italian.
+    </p>
+    <ul>
+        <li>On the first run, the app asks you to choose your language.</li>
+        <li>You can change it later anytime from the Settings window (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd>).</li>
+        <li>Like everything else in the app, it is fully accessible and works perfectly with screen readers such as NVDA and JAWS.</li>
+    </ul>
+    <h3>Your Data Is Safe</h3>
+    <p>
+        Your GitHub token is the key to your account, so I take its security very seriously:
+    </p>
+    <ul>
+        <li>Your token is <strong>encrypted before it is saved</strong> to your computer — it is never stored as plain text.</li>
+    </ul>
+</section>
+
+<section id="single-instance">
+    <h2>Only One Copy at a Time (New)</h2>
+    <p>
+        To keep your data safe and avoid confusion, Git Ready Access now allows only <strong>one running copy</strong> of the program:
+    </p>
+    <ul>
+        <li>If the program is already open and you try to open it again, a friendly message appears telling you it is already running.</li>
+        <li>This prevents two copies from editing the same settings at the same time, which could cause problems.</li>
+        <li>It also saves your computer's memory and keeps things clean.</li>
+    </ul>
+    <div class="note">
+        <strong>Good to know:</strong> if the program ever crashes, the system cleans itself up automatically, so you will never get stuck with a "still running" error.
+    </div>
+</section>
+
+<section id="feature-overview">
+    <h2>Feature Overview at a Glance</h2>
+    <p>A quick reference of everything Git Ready Access can do, organized by area.</p>
+
+    <h3>Dashboard (Main Tab)</h3>
+    <table class="shortcut-table">
+        <tr>
+            <th>Feature</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td><strong>My Repos</strong></td>
+            <td>Lists all repositories of the authenticated user, sorted by last updated.</td>
+        </tr>
+        <tr>
+            <td><strong>New Repo</strong></td>
+            <td>Creates a repository with name, description, privacy setting, auto-README, .gitignore template, and license template.</td>
+        </tr>
+        <tr>
+            <td><strong>Advanced Search</strong></td>
+            <td>Searches all public repositories, a specific user's repositories, or GitHub users.</td>
+        </tr>
+        <tr>
+            <td><strong>Trending Repos</strong></td>
+            <td>Loads popular repositories (high star count) page by page.</td>
+        </tr>
+        <tr>
+            <td><strong>Notifications Center</strong></td>
+            <td>Combines GitHub notifications and server-side administrative notifications.</td>
+        </tr>
+        <tr>
+            <td><strong>Favorites</strong></td>
+            <td>Quick-access list of frequently used repositories with multiple sort orders.</td>
+        </tr>
+        <tr>
+            <td><strong>Repository Statistics</strong></td>
+            <td>Stars, forks, watchers, open issues, size, primary language, default branch, creation/update dates, and privacy status.</td>
+        </tr>
+        <tr>
+            <td><strong>Quick URL Navigation</strong></td>
+            <td>Opens a tab directly from a repository URL; section keywords (<code>releases</code>, <code>issues</code>, <code>pulls</code>, <code>commits</code>, <code>actions</code>) deep-link to the matching window.</td>
+        </tr>
+    </table>
+
+    <h3>Repository Workspace (Tab per Repository)</h3>
+    <table class="shortcut-table">
+        <tr>
+            <th>Area</th>
+            <th>Features</th>
+        </tr>
+        <tr>
+            <td><strong>File Explorer</strong></td>
+            <td>Browse folders, switch/create branches, open files in the browser, navigate back/root.</td>
+        </tr>
+        <tr>
+            <td><strong>File Operations</strong></td>
+            <td>New file, new folder, upload single file, upload entire folders, edit internally, rename, delete, copy / cut / paste (also between repositories).</td>
+        </tr>
+        <tr>
+            <td><strong>Commit Notes</strong></td>
+            <td>Every mutating operation asks for a commit message, pre-filled with a sensible default per operation type.</td>
+        </tr>
+        <tr>
+            <td><strong>History</strong></td>
+            <td>Last 30 commits; drill into any commit to see the message, changed files, additions/deletions, and text patches.</td>
+        </tr>
+        <tr>
+            <td><strong>Issues</strong></td>
+            <td>List all issues, view details with the full comment thread, create issues, reply with comments, close issues (permission-aware).</td>
+        </tr>
+        <tr>
+            <td><strong>Pull Requests</strong></td>
+            <td>List all PRs with Open / Merged / Closed state, view title/author/description, merge with confirmation.</td>
+        </tr>
+        <tr>
+            <td><strong>Releases</strong></td>
+            <td>List and sort releases, view notes and downloadable assets, download or copy asset links, create/edit/delete releases, upload/rename/remove assets in the background.</td>
+        </tr>
+        <tr>
+            <td><strong>Workflows</strong></td>
+            <td>List automation runs with success/failure/pending state; open runs in the browser.</td>
+        </tr>
+        <tr>
+            <td><strong>Team</strong></td>
+            <td>Add/remove collaborators and assign permission levels (Read, Write, Admin, Maintain, Triage).</td>
+        </tr>
+        <tr>
+            <td><strong>Repository Settings</strong></td>
+            <td>Edit name, description, and privacy; delete the repository.</td>
+        </tr>
+        <tr>
+            <td><strong>Bulk Download</strong></td>
+            <td>Download the whole repository as a ZIP archive of the current branch.</td>
+        </tr>
+    </table>
+
+    <h3>Global Capabilities</h3>
+    <table class="shortcut-table">
+        <tr>
+            <th>Capability</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td><strong>Multi-account</strong></td>
+            <td>Log out, switch, and add accounts; supports both OAuth and token sessions.</td>
+        </tr>
+        <tr>
+            <td><strong>Settings center</strong></td>
+            <td>Four sections: Accounts, General, Appearance, Access Keys.</td>
+        </tr>
+        <tr>
+            <td><strong>Dark/Light themes</strong></td>
+            <td>Switchable appearance with adjustable font size (10&ndash;36 px).</td>
+        </tr>
+        <tr>
+            <td><strong>15 languages</strong></td>
+            <td>Full translations with automatic right-to-left layout for RTL languages.</td>
+        </tr>
+        <tr>
+            <td><strong>Single-instance enforcement</strong></td>
+            <td>Only one running copy is allowed.</td>
+        </tr>
+        <tr>
+            <td><strong>Automatic updates</strong></td>
+            <td>Dedicated updater dialog with portable ZIP or installer EXE options.</td>
+        </tr>
+        <tr>
+            <td><strong>System tray integration</strong></td>
+            <td>Runs in the tray with desktop notifications.</td>
+        </tr>
+        <tr>
+            <td><strong>Built-in download manager</strong></td>
+            <td>Live speed and ETA statistics for every download.</td>
+        </tr>
+    </table>
+</section>
+
+<section id="auth-details">
+    <h2>Authentication &amp; Accounts</h2>
+    <h3>Two Sign-in Methods</h3>
+    <ul>
+        <li><strong>Sign in via Browser (OAuth):</strong> The app opens the GitHub authorization page in your browser. After you approve, your login is completed automatically, a success message appears, and the login window closes.</li>
+        <li><strong>Sign in via Token:</strong> The user pastes a token, which is verified live against GitHub before being saved. Includes a show/hide toggle and a direct link to the token generation page.</li>
+    </ul>
+    <h3>Account Registry</h3>
+    <ul>
+        <li>Multiple accounts can be saved, <strong>switched</strong> with one click, <strong>added</strong>, and <strong>logged out</strong>.</li>
+        <li>All actions in the app are performed with the currently active account.</li>
+        <li>Logging out or resetting data requires an app restart to apply cleanly.</li>
+    </ul>
+</section>
+
+<section id="notifications-deep">
+    <h2>Notifications &amp; Background Polling</h2>
+    <p>The app aggregates notifications from two independent sources:</p>
+    <ul>
+        <li><strong>GitHub notifications</strong> — threads, mentions, PR/issues/release activity.</li>
+        <li><strong>Administrative notifications</strong> — server-pushed messages delivered through a cloud database, addressed per username.</li>
+    </ul>
+    <h3>Behavior</h3>
+    <ul>
+        <li>On startup and after login, both sources are fetched <strong>in the background</strong>.</li>
+        <li>A <strong>poll timer</strong> re-fetches notifications every 15 minutes; a <strong>tray timer</strong> re-checks every 10 minutes.</li>
+        <li>Unread items are visually emphasized; the tray icon shows a desktop notification when new items arrive.</li>
+        <li>Marking an item read (or <strong>Mark All Read</strong>) updates the source; for administrative messages the read state is pushed back to the database.</li>
+        <li>Activating a GitHub notification opens the correct page (issue, pull request, or releases) in the browser.</li>
+    </ul>
+</section>
+
+<section id="update-deep">
+    <h2>The Update Mechanism</h2>
+    <h3>Check Flow</h3>
+    <ul>
+        <li>The app checks for updates <strong>on startup</strong> (if enabled) and on manual refresh (<kbd>F5</kbd>).</li>
+        <li>The app checks a version file on the server for the latest available version.</li>
+        <li>The app compares the server's version against its own; if newer, an <strong>Update Prompt</strong> dialog appears listing the new version and a changelog.</li>
+    </ul>
+    <h3>Changelog Localization</h3>
+    <ul>
+        <li>Changelog data is stored per-language in a companion file.</li>
+        <li>The app resolves the matching language, falling back progressively: exact code → language-name heuristics → English → first available entry.</li>
+    </ul>
+    <h3>The Updater Dialog</h3>
+    <ul>
+        <li>Offers a choice between <strong>Portable (ZIP)</strong> and <strong>Installer (EXE)</strong> versions (versions marked as unavailable are hidden).</li>
+        <li>Actions: <strong>Download</strong> (through the built-in download manager), <strong>Copy Link</strong>, or <strong>Download in Browser</strong>.</li>
+    </ul>
+</section>
+
+<section id="download-manager">
+    <h2>The Download Manager</h2>
+    <p>A built-in, IDM-style download window handles every download in the app (files, ZIPs, release assets, updates):</p>
+    <ul>
+        <li>Live statistics: <strong>file size</strong>, <strong>download speed</strong>, <strong>elapsed time</strong>, <strong>estimated remaining time</strong>, and a progress bar.</li>
+        <li>Downloads stream to a <strong>staging folder</strong> inside the app data directory; on completion the file is <strong>moved to the user's Downloads folder</strong>.</li>
+        <li>Name collisions are resolved automatically (<code>name (1).ext</code>).</li>
+        <li><strong>Cancel</strong> aborts cleanly and deletes the partial file.</li>
+        <li>On completion the user chooses: <strong>Open File</strong>, <strong>Open Folder</strong>, or <strong>Close</strong>.</li>
+    </ul>
+</section>
+
 <section id="faq">
     <h2>FAQ & Troubleshooting</h2>
     
@@ -497,21 +839,62 @@
 
     <h3>Can I manage Private Repos?</h3>
     <p>Absolutely, as long as you checked the "repo" permission box when creating your Token in Step 1.</p>
+
+    <h3>Is the app free to use?</h3>
+    <p>Yes. Git Ready Access is a public, free-to-use application.</p>
+
+    <h3>Do I need to keep GitHub open in the browser?</h3>
+    <p>No. The app talks to GitHub directly and manages everything from its own interface.</p>
+
+    <h3>What happens if two instances are opened?</h3>
+    <p>The second instance detects the running one and exits with a message. Stale locks from crashes are cleared automatically.</p>
+
+    <h3>Is my token safe?</h3>
+    <p>Yes. Your token is encrypted before it is saved and is stored safely only inside your own user folder.</p>
 </section>
 
 <footer>
-    <p><strong>GitHub Manager v2.0.5</strong></p>
+    <p><strong>Git Ready Access v1.0.5</strong></p>
     <p>Designed, Developed, and Maintained with love by <strong>Ahmed Hassan Abdel Nabi</strong></p>
-    
+
     <div class="contact-area">
         <a href="https://wa.me/201558863325" target="_blank" class="contact-btn contact-wa">WhatsApp</a>
         <a href="https://t.me/ah3376" target="_blank" class="contact-btn contact-tg">Telegram</a>
         <a href="mailto:ah2635670@gmail.com" class="contact-btn contact-em">Email</a>
     </div>
 
+    <div class="contact-area">
+        <button class="contact-btn copy-btn" onclick="copyText('+20 155 886 3325', this)">Copy Phone Number</button>
+        <button class="contact-btn copy-btn" onclick="copyText('ah3376', this)">Copy Telegram Username</button>
+        <button class="contact-btn copy-btn" onclick="copyText('ah2635670@gmail.com', this)">Copy Email</button>
+    </div>
+
     <p style="margin-top: 20px; font-style: italic; color: #7f8c8d;">Making GitHub accessible and easy for everyone, everywhere.</p>
 </footer>
 </div>
+
+<script>
+    function copyText(text, btn) {
+        var done = function () {
+            var original = btn.textContent;
+            btn.textContent = "Copied!";
+            setTimeout(function () { btn.textContent = original; }, 1500);
+        };
+        if (navigator.clipboard && window.isSecureContext) {
+            navigator.clipboard.writeText(text).then(done);
+        } else {
+            var ta = document.createElement("textarea");
+            ta.value = text;
+            ta.style.position = "fixed";
+            ta.style.opacity = "0";
+            document.body.appendChild(ta);
+            ta.select();
+            try { document.execCommand("copy"); } catch (e) {}
+            document.body.removeChild(ta);
+            done();
+        }
+    }
+</script>
 
 </body>
 </html>
